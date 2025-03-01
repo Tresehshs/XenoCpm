@@ -38,8 +38,14 @@ def gradient_text(text, colors):
     return colorful_text
 
 def banner(console):
-    os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name = figlet_format('XENOCPM', font='bloody')
+    os.system('cls' if os.name == 'nt' else 'clear')   
+    brand_name =  "                     __  __     _____  __   __     _____    _______    _____      _____    __ \n"      
+    brand_name += "                /\  /\  /\ /\_____\/_/\ /\_\   ) ___ ( /\_______)\ ) ___ (    ) ___ (  /\_\\n"      
+    brand_name += "                \ \ \/ / /( (_____/) ) \ ( (  / /\_/\ \\(___  __\// /\_/\ \  / /\_/\ \( ( (\n"      
+    brand_name += "                \ \  / /  \ \__\ /_/   \ \_\/ /_/ (_\ \ / / /   / /_/ (_\ \/ /_/ (_\ \\ \_\ \n"    
+    brand_name += "                 / /  \ \  / /__/_\ \ \   / /\ \ )_/ / /( ( (    \ \ )_/ / /\ \ )_/ / // / /__\n"   
+    brand_name += "                / / /\ \ \( (_____\)_) \ (_(  \ \/_\/ /  \ \ \    \ \/_\/ /  \ \/_\/ /( (_____(\n"  
+    brand_name += "                \/__\/__\/ \/_____/\_\/ \/_/   )_____(   /_/_/     )_____(    )_____(  \/_____/\n"  
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -49,11 +55,10 @@ def banner(console):
     console.print(colorful_text)
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
     print(Colorate.Horizontal(Colors.rainbow, '\t         𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋'))
-    print(Colorate.Horizontal(Colors.rainbow, '    𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃')) 
-    print(Colorate.Horizontal(Colors.rainbow, '      𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐌𝐄 𝐓𝐎 𝐁𝐔𝐘 𝐔𝐍𝐋𝐈𝐌𝐈𝐓𝐄𝐃 𝐁𝐀𝐋𝐀𝐍𝐂𝐄 𝐓𝐆 @trese_xeno ')) 
+    print(Colorate.Horizontal(Colors.rainbow, '    𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃'))
     print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__}'))
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
-    
+
 def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
