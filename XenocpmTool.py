@@ -13,8 +13,8 @@ from pystyle import Colors, Colorate
 
 from tresehshs import Tresehshs
 
-__CHANNEL_USERNAME__ = "Suprememodzofficiall"
-__GROUP_USERNAME__   = "Suprememodzofficialll"
+__CHANNEL_USERNAME__ = "XenoMain Channel"
+__GROUP_USERNAME__   = "XenoMain Chat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
