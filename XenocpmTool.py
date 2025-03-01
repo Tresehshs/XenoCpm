@@ -11,7 +11,7 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from xenocpm import XenoCpm
+from tresehshs import Tresehshs
 
 __CHANNEL_USERNAME__ = "XenoMain Channel"
 __GROUP_USERNAME__   = "XenoMain Chat"
@@ -139,7 +139,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = Tresehshs(acc_access_key)
+        cpm = Tresehshs (acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
