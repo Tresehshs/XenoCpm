@@ -11,7 +11,7 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from Tresehshs import XenoCpm
+from xenocpm import XenoCpm
 
 __CHANNEL_USERNAME__ = "XenoMain Channel"
 __GROUP_USERNAME__   = "XenoMain Chat"
