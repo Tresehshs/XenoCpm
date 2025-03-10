@@ -39,12 +39,12 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')   
-    brand_name =  "                 ██╗░░██╗███████╗███╗░░██╗░█████╗░\n"      
-    brand_name += "                 ╚██╗██╔╝██╔════╝████╗░██║██╔══██╗\n"      
-    brand_name += "                 ░╚███╔╝░█████╗░░██╔██╗██║██║░░██║\n"   
-    brand_name += "                 ░██╔██╗░██╔══╝░░██║╚████║██║░░██║\n"    
-    brand_name += "                 ██╔╝╚██╗███████╗██║░╚███║╚█████╔╝\n"
-    brand_name += "                 ╚═╝░░╚═╝╚══════╝╚═╝░░╚══╝░╚════╝░\n"
+    brand_name =  "                 ██╗  ██╗███████╗███╗  ██╗  █████╗ \n"      
+    brand_name += "                 ╚██╗██╔╝██╔═══╝ ████╗ ██║ ██╔═██╗ \n"      
+    brand_name += "                  ╚███╔╝ █████╗  ██╔██╗██║ ██║  ██║ \n"   
+    brand_name += "                  ██╔██╗ ██╔══╝  ██║╚████║ ██║  ██║ \n"    
+    brand_name += "                 ██╔╝╚██╗███████╗██║ ╚███║╚█████╔╝ \n"
+    brand_name += "                 ╚═╝  ╚═╝╚══════╝╚═╝  ╚══╝  ╚════╝ \n"
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -358,7 +358,7 @@ if __name__ == "__main__":
                 if status == 0:
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: In order to tweak this account with CPMElsedev.'))
+                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: In order to tweak this account with CPMXeno.'))
                     print(Colorate.Horizontal(Colors.rainbow, 'you most sign-in to the game using this account.'))
                     sleep(2)
                     continue
@@ -647,8 +647,7 @@ if __name__ == "__main__":
                     continue                                        
             else: continue
             break
-        break
-            
-        
-            
+        break           
+
+break      
               
