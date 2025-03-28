@@ -15,7 +15,6 @@ from xenocpm import Tresehshs
 
 __CHANNEL_USERNAME__ = "XenoMainChannel"
 __GROUP_USERNAME__   = "XenoMainChat"
-__Facebook__         = "Johnsteve Biron"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -57,7 +56,7 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, '\t         𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋'))
     print(Colorate.Horizontal(Colors.rainbow, '    𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃'))
     print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__}'))
-    print(Colorate.Horizontal(Colors.rainbor, f'            𝐹𝑎𝑐𝑒𝑏𝑜𝑜𝑘: @{__Facebook__}'))
+    print(Colorate.Horizontal(Colors.rainbor, '            𝐹𝑎𝑐𝑒𝑏𝑜𝑜𝑘: Johnsteve Biron'))
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
 
 def load_player_data(cpm):
