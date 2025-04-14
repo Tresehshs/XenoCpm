@@ -246,7 +246,6 @@ class Tresehshs:
         payload = {
         "account_auth": self.auth_token,
         "car_id": car_id,
-        "custom": custom,
         }
         params = {"key": self.access_key}
         response = requests.post(f"{BASE_URL}/millage_car", params=params, data=payload)
