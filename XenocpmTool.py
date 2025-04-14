@@ -648,11 +648,13 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
-            elif service == 29: # Millage
+            elif service == 30: # Millage
                 console.print("[bold]ENTER CAR DETAILS![/bold]")
-                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")             
+                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
+                console.print("[bold]ENTER NEW MILLAGE![/bold]")
+                custom = IntPrompt.ask("[bold blue][?]﻿ENTER MILLAGE U WANT[/bold blue]")                
                 console.print("[bold red][%] Setting Percentage [/bold red]: ", end=None)
-                if cpm.millage_car(car_id):
+                if cpm.millage_car(car_id, custom):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
