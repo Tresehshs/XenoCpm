@@ -1,6 +1,6 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://mediumorchid-aardvark-464116.hostingersite.com/api"
+__ENDPOINT_URL__: str = "https://xeno1.squareweb.app/api"
 
 class Tresehshs:
     def __init__(self, access_key) -> None:
