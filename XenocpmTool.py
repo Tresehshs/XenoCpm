@@ -654,7 +654,7 @@ if __name__ == "__main__":
                 console.print("[bold]ENTER NEW MILLAGE![/bold]")
                 custom = IntPrompt.ask("[bold blue][?]﻿ENTER MILLAGE U WANT[/bold blue]")                
                 console.print("[bold red][%] Setting Percentage [/bold red]: ", end=None)
-                if cpm.millage_car(car_id, custom):
+                if cpm.custom_car_mileage(car_id, custom):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
