@@ -196,7 +196,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{24}: Change Race Wins         1K'))
             print(Colorate.Horizontal(Colors.rainbow, '{25}: Change Race Loses        1K'))
             print(Colorate.Horizontal(Colors.rainbow, '{26}: Clone Account            7K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{27}: Inner car 414hp          2.5k'))
+            print(Colorate.Horizontal(Colors.rainbow, '{27}: Custom Hp                2.5k'))
             print(Colorate.Horizontal(Colors.rainbow, '{28}: Custom Angle             1.5k'))
             print(Colorate.Horizontal(Colors.rainbow, '{29}: Custom Mileage           2.5k'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
