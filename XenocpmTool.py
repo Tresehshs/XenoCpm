@@ -694,10 +694,10 @@ if __name__ == "__main__":
                         console.print("[bold red]FAILED[/bold red]")
                         console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
                         sleep(2)
-                        continue
-                else:
-                    continue
-                break
+                        continue 
+             else:
+                 continue
+             break
 
                        
               
