@@ -652,23 +652,24 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
-            elif service == 29: # Millage
-                console.print("[bold]ENTER CAR DETAILS![/bold]")
-                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
-                console.print("[bold]ENTER NEW MILLAGE![/bold]")
-                custom = IntPrompt.ask("[bold blue][?]﻿ENTER MILLAGE U WANT[/bold blue]")                
-                console.print("[bold red][%] Setting Percentage [/bold red]: ", end=None)
-                if cpm.millage_car(car_id, custom):
+            elif service == 29: # MILLAGE
+                console.print("[bold yellow][!] Note[/bold yellow]: mileage is just visual and does not affect performance.")
+                console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
+                car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
+                custom_mileage = IntPrompt.ask("[bold blue][?] Enter New Mileage[/bold blue]")
+                console.print("[bold yellow][%] Setting Car Mileage[/bold yellow]:", end=None)
+                if cpm.millage_car(car_id, custom_mileage):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
-                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("THANK YOU FOR USING OUR TOOL")
+                    console.print("================================")
+                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                    if answ == "y" console.print("[bold white] Thank You for using my tool[/bold white]")
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
+                    console.print("[bold red]FAILED[/bold red]")
+                    console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
                     sleep(2)
                     continue
-            else: continue
-            break
+             break
+
                        
               
