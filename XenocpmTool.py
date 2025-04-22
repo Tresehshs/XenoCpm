@@ -674,8 +674,8 @@ if __name__ == "__main__":
                 console.print("[bold yellow][!] Note[/bold yellow]: shift time and rim size are updated for the car.")
                 console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
                 car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
-                print(Colorate.Horizontal(Colors.rainbow, '[!] INGRESA VALORES SHIFTIME'))
-                custom_input = Prompt.ask("[red][?] INGRESA LOS VALORES DE TU SHIFTIME[/red]")
+                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER SHIFTIME VALUES'))
+                custom_input = Prompt.ask("[red][?] ENTER YOUR SHIFTIME VALUES[/red]")
                 try:
                     custom_shift_time = float(custom_input)
                 except ValueError:
@@ -683,7 +683,7 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
                 console.print("[bold yellow][%] Setting Car Shift Time and Rim Size[/bold yellow]:", end=None)
-                if cpm.car_shifttime(car_id, custom_shift_time):
+                if cpm.car_shifttime(car_id, car_shifttime):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     console.print("[bold green]======================================[/bold green]")
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
