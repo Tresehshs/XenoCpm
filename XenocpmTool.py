@@ -662,7 +662,7 @@ if __name__ == "__main__":
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     console.print("================================")
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y" console.print("[bold white] Thank You for using my tool[/bold white]")
+                    if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
                     else: continue
                 else:
                     console.print("[bold red]FAILED[/bold red]")
