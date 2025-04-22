@@ -196,9 +196,9 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{24}: Change Race Wins         1K'))
             print(Colorate.Horizontal(Colors.rainbow, '{25}: Change Race Loses        1K'))
             print(Colorate.Horizontal(Colors.rainbow, '{26}: Clone Account            7K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{27}: Custom Hp                2.5k'))
-            print(Colorate.Horizontal(Colors.rainbow, '{28}: Custom Angle             1.5k'))
-            print(Colorate.Horizontal(Colors.rainbow, '{29}: Custom Mileage           2.5k'))
+            print(Colorate.Horizontal(Colors.rainbow, '{27}: Custom Car Hp            2.5k'))
+            print(Colorate.Horizontal(Colors.rainbow, '{28}: Custom Car Angle         1.5k'))
+            print(Colorate.Horizontal(Colors.rainbow, '{29}: Custom Car Millage       2.5k'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -656,9 +656,8 @@ if __name__ == "__main__":
                 console.print("[bold yellow][!] Note[/bold yellow]: mileage is just visual and does not affect performance.")
                 console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
                 car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
-                custom_mileage = IntPrompt.ask("[bold blue][?] Enter New Mileage[/bold blue]")
                 console.print("[bold yellow][%] Setting Car Mileage[/bold yellow]:", end=None)
-                if cpm.millage_car(car_id, custom_mileage):
+                if cpm.millage_car(car_id):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     console.print("================================")
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
