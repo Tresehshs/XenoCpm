@@ -689,9 +689,8 @@ if __name__ == "__main__":
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
                     if answ == "y": 
                         console.print("[bold white]Thank You for using my tool[/bold white]")
-                    else:
-                        continue
-                    else:
+                    else: continue
+                else:
                         console.print("[bold red]FAILED[/bold red]")
                         console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
                         sleep(2)
