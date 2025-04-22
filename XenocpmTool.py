@@ -169,7 +169,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29" "30"]
             print(Colorate.Horizontal(Colors.rainbow, '{01}: Increase Money           1.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{02}: Increase Coins           4.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{03}: King Rank                8K'))
@@ -199,6 +199,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{27}: Custom Car Hp            2.5k'))
             print(Colorate.Horizontal(Colors.rainbow, '{28}: Custom Car Angle         1.5k'))
             print(Colorate.Horizontal(Colors.rainbow, '{29}: Custom Car Millage       2.5k'))
+            print(Colorate.Horizontal(Colors.rainbow, '{30}: Set Car Shifttime        2.5k'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -669,7 +670,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
                     sleep(2)
                     continue
-            elif service == 33:  # Shiftime
+            elif service == 30:  # Shiftime
                 console.print("[bold yellow][!] Note[/bold yellow]: shift time and rim size are updated for the car.")
                 console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
                 car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
@@ -682,7 +683,7 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
                 console.print("[bold yellow][%] Setting Car Shift Time and Rim Size[/bold yellow]:", end=None)
-                if cpm.shiftin(car_id, custom_shift_time):
+                if cpm.car_shifttime(car_id, custom_shift_time):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     console.print("[bold green]======================================[/bold green]")
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
