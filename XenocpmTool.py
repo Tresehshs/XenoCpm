@@ -669,9 +669,35 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
                     sleep(2)
                     continue
-            else:
-                continue
-            break
+            elif service == 33:  # Shiftime
+                console.print("[bold yellow][!] Note[/bold yellow]: shift time and rim size are updated for the car.")
+                console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
+                car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
+                print(Colorate.Horizontal(Colors.rainbow, '[!] INGRESA VALORES SHIFTIME'))
+                custom_input = Prompt.ask("[red][?] INGRESA LOS VALORES DE TU SHIFTIME[/red]")
+                try:
+                    custom_shift_time = float(custom_input)
+                except ValueError:
+                    console.print("[bold red]INVALID VALUE, PLEASE ENTER A NUMBER[/bold red]")
+                    sleep(2)
+                    continue
+                console.print("[bold yellow][%] Setting Car Shift Time and Rim Size[/bold yellow]:", end=None)
+                if cpm.shiftin(car_id, custom_shift_time):
+                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
+                    console.print("[bold green]======================================[/bold green]")
+                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                    if answ == "y": 
+                        console.print("[bold white]Thank You for using my tool[/bold white]")
+                    else:
+                        continue
+                    else:
+                        console.print("[bold red]FAILED[/bold red]")
+                        console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
+                        sleep(2)
+                        continue
+                else:
+                    continue
+                    break
 
                        
               
