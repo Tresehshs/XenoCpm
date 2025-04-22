@@ -652,12 +652,13 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
-            elif service == 29: # MILLAGE
+            elif service == 29:  # MILLAGE
                 console.print("[bold yellow][!] Note[/bold yellow]: mileage is just visual and does not affect performance.")
                 console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
                 car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
+                custom_mileage = IntPrompt.ask("[bold blue][?] Enter Custom Mileage[/bold blue]")
                 console.print("[bold yellow][%] Setting Car Mileage[/bold yellow]:", end=None)
-                if cpm.millage_car(car_id):
+                if cpm.millage_car(car_id, custom_mileage):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     console.print("================================")
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
@@ -668,7 +669,7 @@ if __name__ == "__main__":
                     console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
                     sleep(2)
                     continue
-            else:
+                else:
                 continue
             break
 
