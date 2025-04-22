@@ -257,7 +257,7 @@ class Tresehshs:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def Shiftime(self, car_id, custom):
+    def car_shifttime(self, car_id, custom):
         payload = {
             "account_auth": self.auth_token,
             "car_id": car_id,
