@@ -244,7 +244,18 @@ class Tresehshs:
         params = {"key": self.access_key}
         response = requests.post(f"{__ENDPOINT_URL__}/max_max1", params=params, data=payload)
         response_decoded = response.json()
-        return response_decoded.get("ok")      
+        return response_decoded.get("ok")  
+        
+    def max_max2(self, car_id, custom):
+        payload = {
+            "account_auth": self.auth_token,
+            "car_id": car_id,
+            "custom": custom,
+        }
+        params = {"key": self.access_key}
+        response = requests.post(f"{__ENDPOINT_URL__}/max_max2", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")  
 
     def millage_car(self, car_id, custom_mileage):
         payload = {
@@ -257,14 +268,14 @@ class Tresehshs:
         response_decoded = response.json()
         return response_decoded.get("ok")
 
-    def car_shifttime(self, car_id, custom):
+    def shifttime(self, car_id, custom):
         payload = {
             "account_auth": self.auth_token,
             "car_id": car_id,
             "custom": custom,
         }
         params = {"key": self.access_key}
-        response = requests.post(f"{__ENDPOINT_URL__}/car_shifttime", params=params, data=payload)
+        response = requests.post(f"{__ENDPOINT_URL__}/shifttime", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")    
       
