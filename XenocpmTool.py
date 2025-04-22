@@ -697,7 +697,7 @@ if __name__ == "__main__":
                         continue
                 else:
                     continue
-                    break
+                break
 
                        
               
