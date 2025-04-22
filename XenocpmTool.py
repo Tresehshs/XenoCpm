@@ -677,13 +677,13 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER SHIFTIME VALUES'))
                 custom_input = Prompt.ask("[red][?] ENTER YOUR SHIFTIME VALUES[/red]")
                 try:
-                    custom_shift_time = float(custom_input)
+                    custom = float(custom_input)
                 except ValueError:
                     console.print("[bold red]INVALID VALUE, PLEASE ENTER A NUMBER[/bold red]")
                     sleep(2)
                     continue
                 console.print("[bold yellow][%] Setting Car Shift Time and Rim Size[/bold yellow]:", end=None)
-                if cpm.car_shifttime(car_id, car_shifttime):
+                if cpm.shifttime(car_id, custom):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     console.print("[bold green]======================================[/bold green]")
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
