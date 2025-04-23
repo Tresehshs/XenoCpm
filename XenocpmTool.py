@@ -169,7 +169,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"]
             print(Colorate.Horizontal(Colors.rainbow, '{01}: Increase Money                1.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{02}: Increase Coins                4.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{03}: King Rank                     8K'))
@@ -198,9 +198,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.rainbow, '{26}: Clone Account                 5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{27}: Custom Car Hp                 2.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{28}: Custom Car Angle              1.5K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{29}: Custom Car Millage            2.5K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{30}: Set Car Shifttime             2.5K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{31}: Copy Car Design To Another    2.5K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{29}: Copy Car Design To Another    2.5K'))
             print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -654,49 +652,8 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, 'PLEASE TRY AGAIN'))
                     sleep(2)
                     continue
-            elif service == 29:  # MILLAGE
-                console.print("[bold yellow][!] Note[/bold yellow]: mileage is just visual and does not affect performance.")
-                console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
-                car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
-                custom_mileage = IntPrompt.ask("[bold blue][?] Enter Custom Mileage[/bold blue]")
-                console.print("[bold yellow][%] Setting Car Mileage[/bold yellow]:", end=None)
-                if cpm.millage_car(car_id, custom_mileage):
-                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
-                    console.print("================================")
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
-                    else: continue
-                else:
-                    console.print("[bold red]FAILED[/bold red]")
-                    console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
-                    sleep(2)
-                    continue
-            elif service == 30:  # Shiftime
-                console.print("[bold yellow][!] Note[/bold yellow]: shift time and rim size are updated for the car.")
-                console.print("[bold yellow][!] Enter Car Details.[/bold yellow]")
-                car_id = IntPrompt.ask("[bold][?] Car Id[/bold]")
-                print(Colorate.Horizontal(Colors.rainbow, '[!] ENTER SHIFTIME VALUES'))
-                custom_input = Prompt.ask("[red][?] ENTER YOUR SHIFTIME VALUES[/red]")
-                try:
-                    custom = float(custom_input)
-                except ValueError:
-                    console.print("[bold red]INVALID VALUE, PLEASE ENTER A NUMBER[/bold red]")
-                    sleep(2)
-                    continue
-                console.print("[bold yellow][%] Setting Car Shift Time and Rim Size[/bold yellow]:", end=None)
-                if cpm.shifttime(car_id, custom):
-                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
-                    console.print("[bold green]======================================[/bold green]")
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": 
-                        console.print("[bold white]Thank You for using my tool[/bold white]")
-                    else: continue
-                else:
-                        console.print("[bold red]FAILED[/bold red]")
-                        console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
-                        sleep(2)
-                        continue
-            elif service == 31:  # Copy design from one car to another
+            
+            elif service == 29:  # Copy design from one car to another
                 console.print("[bold]Copying the design of one car to another...[/bold]")
                 source_id = IntPrompt.ask("[bold cyan][?] ID source car[/bold cyan]")
                 target_id = IntPrompt.ask("[bold cyan][?] ID target car[/bold cyan]")
