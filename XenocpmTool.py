@@ -696,7 +696,7 @@ if __name__ == "__main__":
                         console.print("[bold yellow][!] Please try again with valid values[/bold yellow]")
                         sleep(2)
                         continue
-             elif service == 31:  # Copy design from one car to another
+            elif service == 31:  # Copy design from one car to another
                 console.print("[bold]Copying the design of one car to another...[/bold]")
                 source_id = IntPrompt.ask("[bold cyan][?] Enter the ID of the source car[/bold cyan]")
                 target_id = IntPrompt.ask("[bold cyan][?] Enter the ID of the source car[/bold cyan]")
