@@ -698,8 +698,8 @@ if __name__ == "__main__":
                         continue
             elif service == 31:  # Copy design from one car to another
                 console.print("[bold]Copying the design of one car to another...[/bold]")
-                source_id = IntPrompt.ask("[bold cyan][?] Enter the ID of the source car[/bold cyan]")
-                target_id = IntPrompt.ask("[bold cyan][?] Enter the ID of the source car[/bold cyan]")
+                source_id = IntPrompt.ask("[bold cyan][?] ID source car[/bold cyan]")
+                target_id = IntPrompt.ask("[bold cyan][?] ID target car[/bold cyan]")
                 console.print("[bold red][%] Applying design from the origin to the destination car...[/bold red]", end=None)
                 if cpm.copy_car_design(source_id, target_id):
                     print(Colorate.Horizontal(Colors.rainbow, f"✔ The design of the car {source_id} was copied to the car {target_id} successfully."))
