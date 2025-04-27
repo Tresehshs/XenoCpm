@@ -39,7 +39,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')   
-    brand_name =  "              . __  _______ _   _  ___   ____ ____  __  __  . \n"
+    brand_name  = "              . __  _______ _   _  ___   ____ ____  __  __  . \n"
     brand_name += "              . \ \/ / ____| \ | |/ _ \ / ___|  _ \|  \/  | . \n"
     brand_name += "              .  \  /|  _| |  \| | | | | |   | |_) | |\/| | . \n"
     brand_name += "              .  /  \| |___| |\  | |_| | |___|  __/| |  | | . \n"
