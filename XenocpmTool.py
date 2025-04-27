@@ -15,6 +15,7 @@ from xenocpm import Tresehshs
 
 __CHANNEL_USERNAME__ = "XenoMainChannel"
 __GROUP_USERNAME__   = "XenoMainChat"
+__Facebook__         = "Johnsteve Biron"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
