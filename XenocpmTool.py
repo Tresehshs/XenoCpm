@@ -40,10 +40,10 @@ def gradient_text(text, colors):
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')   
     brand_name = "              . __  _______ _   _  ___   ____ ____  __  __  . \n"
-    brand_name = "              . \ \/ / ____| \ | |/ _ \ / ___|  _ \|  \/  | . \n"
-    brand_name = "              .  \  /|  _| |  \| | | | | |   | |_) | |\/| | . \n"
-    brand_name = "              .  /  \| |___| |\  | |_| | |___|  __/| |  | | . \n"
-    brand_name = "              . /_/\_\_____|_| \_|\___/ \____|_|   |_|  |_| . \n"           
+    brand_name += "             . \ \/ / ____| \ | |/ _ \ / ___|  _ \|  \/  | . \n"
+    brand_name += "             .  \  /|  _| |  \| | | | | |   | |_) | |\/| | . \n"
+    brand_name += "             .  /  \| |___| |\  | |_| | |___|  __/| |  | | . \n"
+    brand_name += "             . /_/\_\_____|_| \_|\___/ \____|_|   |_|  |_| . \n"           
     colors = [
         "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", 
         "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)",
@@ -81,7 +81,7 @@ def load_player_data(cpm):
             # Remove duplicates by converting the list to a set
             unique_car_data = set(car_data)
             car_count = len(unique_car_data)
-            print(Colorate.Horizontal(Colors.red_to_yellow, f'Car Count   : {car_count'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, f'Car Count   : {car_count}'))
             
         else:
             print(Colorate.Horizontal(Colors.red_to_yellow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
