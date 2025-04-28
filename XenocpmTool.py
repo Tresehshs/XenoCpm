@@ -756,6 +756,20 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] EMAIL IS ALREADY REGISTERED'))
                     sleep(4)
                     continue
+            elif service == 35:  # Change Password
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER NEW PASSWORD'))
+                new_password = Prompt.ask("[bold][?] ACCOUNT NEW PASSWORD[/bold]")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] CHANGING PASSWORD'))
+                if cpm.change_password(new_password):
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                    sleep(4)
+                    continue     
             else: continue
             break
                        
