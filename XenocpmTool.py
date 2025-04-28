@@ -744,7 +744,7 @@ if __name__ == "__main__":
                     continue
             elif service == 34:  # Change Email
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER NEW EMAIL'))
-                new_email = Prompt.ask("[bold][?] ACCOUNT NEW EMAIL[/bold]", default="")
+                new_email = Prompt.ask("[bold][?] ACCOUNT NEW EMAIL[/bold]")
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[!] CHANGING EMAIL'))
                 if cpm.change_email(new_email):
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
