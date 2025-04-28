@@ -749,7 +749,7 @@ if __name__ == "__main__":
                 if cpm.change_email(new_email):
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.green_to_white, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.')
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
