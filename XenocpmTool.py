@@ -100,7 +100,7 @@ def load_key_data(cpm):
     
     print(Colorate.Horizontal(Colors.red_to_yellow, f'Access Key : [black]{data.get('access_key')}[/black]'))
     
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Telegram ID: {data.get("telegram_id")}.'))
+    print(Colorate.Horizontal(Colors.red_to_yellow, f'Telegram ID : {data.get("telegram_id")}.'))
     
     print(Colorate.Horizontal(Colors.red_to_yellow, f'Balance $  : {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}.'))
         
