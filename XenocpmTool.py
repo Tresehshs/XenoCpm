@@ -742,18 +742,18 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] Please Try Again'))
                     sleep(2)
                     continue
-            elif service == 34:
-                console.print("[bold]Enter New Email![/bold]")
-                new_email = prompt_valid_value("[bold][?] Account New Email[/bold]", "Email")
-                console.print("[bold red][%] Changing Email [/bold red]: ", end=None)
+            elif service == 34:  # Change Email
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER NEW EMAIL'))
+                new_email = Prompt.ask("[bold][?] ACCOUNT NEW EMAIL[/bold]", default="")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] CHANGING EMAIL'))
                 if cpm.change_email(new_email):
-                    console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
-                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("[bold white]Thank You for using my tool[/bold white]")
-                    else: break
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.green_to_white, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.')
+                    else: continue
                 else:
-                    console.print("[bold red]FAILED[/bold yellow]")
-                    console.print("[bold red]EMAIL IS ALREADY REGISTERED [/bold red]")
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] EMAIL IS ALREADY REGISTERED'))
                     sleep(4)
                     continue
             else: continue
