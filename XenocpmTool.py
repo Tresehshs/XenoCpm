@@ -98,7 +98,7 @@ def load_key_data(cpm):
     
     print(Colorate.Horizontal(Colors.red_to_yellow, '========[ ACCESS KEY DETAILS ]========'))
     
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Access Key : {data.get('access_key")}.'))
+    print(Colorate.Horizontal(Colors.black, f'Access Key : {data.get("access_key")}.'))
     
     print(Colorate.Horizontal(Colors.red_to_yellow, f'Telegram ID : {data.get("telegram_id")}.'))
     
