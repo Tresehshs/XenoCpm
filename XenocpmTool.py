@@ -211,6 +211,8 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '{31}: Custom Car Millage       2K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{32}: Remove Rear Bumper       2.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{33}: Remove Front Bumper      2.5K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '{34}: Change Gmail             2K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '{35}: Change Password          2K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
