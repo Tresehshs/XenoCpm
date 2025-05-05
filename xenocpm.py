@@ -348,5 +348,19 @@ class Tresehshs:
         response = requests.post(f"{__ENDPOINT_URL__}/telmunnongonz", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+        
+    def shittin(self) -> bool: 
+        payload = { "account_auth": self.auth_token } 
+        params = { "key": self.access_key } 
+        response = requests.post(f"{__ENDPOINT_URL__}/shittin", params=params, data=payload) 
+        response_decoded = response.json() 
+        return response_decoded.get("ok")
+
+    def unlock_crown(self) -> bool: 
+        payload = { "account_auth": self.auth_token } 
+        params = { "key": self.access_key } 
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_crown", params=params, data=payload) 
+        response_decoded = response.json() 
+        return response_decoded.get("ok")
  
 
