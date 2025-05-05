@@ -213,6 +213,10 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '{33}: Remove Front Bumper      2.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{34}: Change Gmail             2K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{35}: Change Password          2K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(36): Custom Spoiler           10K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(37): Custom Body Kit          10K'))
+            print(colorate.Horizontal(Colors.red_to_yellow, '(38): Unlock Premium Wheels    4.5K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(39): Unlock Toyota Crown      2K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -771,6 +775,65 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
                     sleep(4)
                     continue     
+            elif service == 36:  # Custom Spoiler
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER CAR DETAILS'))
+                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER SPOILER ID'))
+                custom = IntPrompt.ask("[bold blue][?] ENTER NEW SPOILER ID[/bold blue]")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] SAVING YOUR DATA'))
+                if cpm.spoiler(car_id, custom):
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                    sleep(4)
+                    continue       
+            elif service == 37:  # Custom BodyKit
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER CAR DETAILS'))
+                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER BODYKIT ID'))
+                custom = IntPrompt.ask("[bold blue][?] INSERT BODYKIT ID[/bold blue]")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] SAVING YOUR DATA'))
+                if cpm.bodykit(car_id, custom):
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                    sleep(4)
+                    continue
+            elif service == 38:  # Unlock Premium Wheels
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] UNLOCKING PREMIUM WHEELS'))
+                if cpm.premiumwheels():
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    print(Colorate.Horizontal(Colors.green_to_white, '======================================'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                    sleep(4)
+                    continue   
+            elif service == 39:  # Unlock Toyota Crown
+                 print(Colorate.Horizontal(Colors.red_to_yellow, '[!] NOTE: THIS FUNCTION TAKES A WHILE TO COMPLETE, PLEASE DON\'T CANCEL'))
+                 print(Colorate.Horizontal(Colors.red_to_yellow, '[%] UNLOCKING TOYOTA CROWN'))
+                 if cpm.unlock_crown():
+                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                     print(Colorate.Horizontal(Colors.green_to_white, '======================================'))
+                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                     else: continue
+                 else:
+                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                     sleep(4)
+                     continue
             else: continue
             break
                        
