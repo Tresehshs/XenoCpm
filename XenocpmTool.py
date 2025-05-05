@@ -809,7 +809,7 @@ if __name__ == "__main__":
                     continue
             elif service == 38:  # Unlock Premium Wheels
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[%] UNLOCKING PREMIUM WHEELS'))
-                if cpm.premiumwheels():
+                if cpm.shittin():
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     print(Colorate.Horizontal(Colors.green_to_white, '======================================'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
