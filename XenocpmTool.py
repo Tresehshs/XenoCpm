@@ -215,7 +215,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '{35}: Change Password          2K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(36): Custom Spoiler           10K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(37): Custom Body Kit          10K'))
-            print(colorate.Horizontal(Colors.red_to_yellow, '(38): Unlock Premium Wheels    4.5K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(38): Unlock Premium Wheels    4.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(39): Unlock Toyota Crown      2K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
