@@ -177,7 +177,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50"]
             print(Colorate.Horizontal(Colors.red_to_yellow, '{01}: Increase Money           1.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{02}: Increase Coins           4.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{03}: King Rank                8K'))
@@ -969,6 +969,19 @@ if __name__ == "__main__":
                 custom = IntPrompt.ask("[bold blue][?] INSERT VALUE[/bold blue]")
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[%] SAVING YOUR DATA'))
                 if cpm.incline(car_id, custom):
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                    sleep(4)
+                    continue
+            elif service == 50:  # Unlock All Lamborghinis
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] THIS FUNCTION MAY TAKE A WHILE, PLEASE WAIT...'))
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] UNLOCKING ALL LAMBORGHINIS'))
+                if cpm.unlock_all_lamborghinis():
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
