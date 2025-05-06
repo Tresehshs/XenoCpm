@@ -226,7 +226,8 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '(46): Unlock Clan Top 1 (F)    3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(47): Unlock Clan Top 2 (F)    3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(48): Unlock Mercedes Cls      4K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(49): Stance Camber            1K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(49): Car Incline              1K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(50): Unlock Lambo (IOS ONLY)  5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
