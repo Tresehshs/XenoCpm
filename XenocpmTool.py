@@ -220,11 +220,11 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '(40): Unlock Clan Hat (M)      3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(41): Remove Head Male         3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(42): Remove Head Female       3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(43): Unlock Clan Top 2 (M)    3K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(43): Unlock Clan Top 1 (M)    3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(44): Unlock Clan Top 2 (M)    3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(45): Unlock Clan Top 3 (M)    3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(46): Unlock Clan Top 1 (F)    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(46): Unlock Clan Top 2 (F)    3K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(47): Unlock Clan Top 2 (F)    3K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -938,6 +938,35 @@ if __name__ == "__main__":
                 if cpm.unlock_topfz():
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     print(Colorate.Horizontal(Colors.green_to_white, '======================================'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                    sleep(4)
+                    continue
+            elif service == 48:  # Unlock Mercedes Cls
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] UNLOCKING MERCEDES CLS'))
+                if cpm.unlock_cls():
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    print(Colorate.Horizontal(Colors.green_to_white, '======================================'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
+                    sleep(4)
+                    continue
+            elif service == 49:  # incline
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] ENTER CAR DETAILS'))
+                car_id = IntPrompt.ask("[bold][?] CAR ID[/bold]")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] ENTER VALUE FOR STANCE'))
+                custom = IntPrompt.ask("[bold blue][?] INSERT VALUE[/bold blue]")
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] SAVING YOUR DATA'))
+                if cpm.incline(car_id, custom):
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
                     else: continue
