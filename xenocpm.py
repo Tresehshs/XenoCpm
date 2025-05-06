@@ -404,5 +404,19 @@ class Tresehshs:
         response = requests.post(f"{__ENDPOINT_URL__}/unlock_topmx", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+        
+    def unlock_topf(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_topf", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
+        
+    def unlock_topfz(self) -> bool:
+        payload = { "account_auth": self.auth_token }
+        params = { "key": self.access_key }
+        response = requests.post(f"{__ENDPOINT_URL__}/unlock_topfz", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
  
 
