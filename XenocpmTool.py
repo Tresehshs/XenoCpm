@@ -89,7 +89,7 @@ def load_player_data(cpm):
             sleep(1)
     else:
         print(Colorate.Horizontal(Colors.red_to_yellow, '! ERROR: seems like your login is not properly set !.'))
-        exit(1)
+        sleep(1)
 
 
 def load_key_data(cpm):
